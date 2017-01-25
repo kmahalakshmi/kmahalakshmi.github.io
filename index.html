@@ -1,4 +1,5 @@
 <!doctype html>
+<html lang="en" ng-app="MahaBlog">
 
 <head>
     <title>Front-end developer</title>
@@ -8,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 </head>
 
-<body>
-    <section class="main__blog scroll__bar">
+<body ng-controller="HomeController">
+    <!-- <div ng-include="'_partials/header.html'" scope="" onload=""></div> -->
+    <header>
         <div class="bg__line">
             <div class="line line__first"></div>
             <div class="line line__second"></div>
@@ -17,32 +19,22 @@
             <div class="line line__fourth"></div>
             <div class="line line__fifth"></div>
         </div>
+        
         <div class="container-fluid">
             <div class="row">
-                <div class="header col-md-12">
-                	<div class="menu__section list__section">
-                	
-                	<a class="menu__list" href="about.html">
-                        About
-                    </a>
-                    <a class="menu__list" href="projects.html">
-                        Projects
-                    </a>
-                    <a class="menu__list" href="#">
-                        Blog
-                    </a>
-                    <a class="menu__list" href="contact.html">
-                        Contact
-                    </a>                 
-                    </div>
-                    <div class="devp__name">
-                    <a href="index.html">
-                        mahalakshmi
-                        </a>
-                    </div>
-                </div>
+                <a ng-repeat="n in nav" ng-class="{'active': state==n.slug}" class="menu__list menu__list__menu" ng-click="changeRoute(n.slug)" ng-href="#{{n.slug}}">
+                    {{n.name}}
+                </a>
+            </div>
+            <div class="devp__name">
+                <a ng-class="{'active': state=='home'}"  ng-click="state='home'" href="#">
+
+                Mahalakshmi
+                </a>
             </div>
         </div>
+    </header>
+    <section class="main__blog scroll__bar" ng-show="state=='home'">
         <div class="container-fluid">
             <div class="row">
                 <div class="header__content col-md-12">
@@ -64,7 +56,39 @@
             </div>
         </div>
     </section>
-    <script src="Js/main.js"></script>
+    <section class="contct__section scrollbar" ng-show="state=='about'">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="header col-md-12">
+                    <div class="menu__section list__section">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12 aboutme__class">
+                                    <div class="gist__content">
+                                        <div class="whoami">who am I</div>
+                                        <div class="aboutme">about me</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-offset-2 col-md-8 about__maha">
+                                    I am Maha, 23 years old UI developer from chennai, I am passionate about creating new ideas and to be unique. 1+ years of experience as HTML5, CSS3 and jQuery Developer. I am able to set and meet high professional standards. I enjoy a challenge and look for the opportunity to expand and develop my skill set.
+                                </div>
+                                <div class="social__links col-md-2">
+                                    <div class="external__link "><a target="_blank" href="https://github.com/kmahalakshmi"><i class="fa fa-github" aria-hidden="true"></i>Github</a></div>
+                                    <div class="external__link"><a target="_blank" href="https://www.linkedin.com/in/mahalakshmi-k-57a39276"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 </body>
+<script src="Js/angular.min.js"></script>
+<script src="Js/angular-route.min.js"></script>
+<script src="Js/main.js"></script>
 
 </html>

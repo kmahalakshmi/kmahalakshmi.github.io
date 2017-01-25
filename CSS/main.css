@@ -1,3 +1,5 @@
+
+
 .main__blog,.main__Section
 {
 	background-size: cover;
@@ -165,7 +167,7 @@ body
 	margin-bottom: 50px;
 	margin-left: 15%;
 }
-.menu__list__menu
+.menu__list__menu:first-child
 {
 	padding-left: 209px;
 }
@@ -370,3 +372,13 @@ input[type=submit]
 
 
 
+.menu__list.active {
+
+background: -webkit-linear-gradient(left, #250687 0%, #24a404 100%);
+background: -o-linear-gradient(left, #250687 0%, #24a404 100%);
+background: linear-gradient(to right, #250687 0%, #24a404 100%);
+        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
