@@ -9,15 +9,15 @@
     <div class="container-fluid">
         <div class="row">
             <a class="menu__list menu__list__menu" ng-click="state='about'" href="#about">
-                About
+                {{state}}
             </a>
-            <a class="menu__list" href="projects.html">
-                Projects
+            <a class="menu__list" ng-click="state='projects'" href="#projects">
+                {{state}}
             </a>
-            <a class="menu__list" href="#">
+            <a class="menu__list" href="https://medium.com/@Mahalakshmi_K">
                 Blog
             </a>
-            <a class="menu__list" href="contact.html">
+            <a class="menu__list" ng-click="state='contact'" href="#contact">
                 {{state}}
             </a>                 
             </div>
