@@ -24,6 +24,16 @@ angular.module("MahaBlog",[
 		{name:"Projects", slug: "#projects"},
 		{name:"Contact", slug: "#contact"}
 	];
+
+	$scope.podcasturl = 'https://kmahalakshmi.github.io/Podcast-theme/';
+	$scope.joblyurl = 'https://kmahalakshmi.github.io/jobly/';
+	$scope.movieurl = 'https://kmahalakshmi.github.io/Movie-Theme/';
+	$scope.nsiurl = 'https://kmahalakshmi.github.io/NSIndia/';
+
+$scope.linktourl = function (url){
+  
+  $window.open(url);
+}
 }])
 
 

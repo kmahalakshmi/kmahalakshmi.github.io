@@ -222,7 +222,7 @@ body
 .proj__img
 {
 	width: 81%;
-    margin-left: 77px;
+    margin-left: 21px;
     border-radius: 20px;
     box-shadow: 10px 7px 5px #888888;
     
@@ -238,7 +238,7 @@ body
     overflow: hidden;
     margin-top: 50px;
     text-decoration: none;
-    margin-left: 40%;
+    margin-left: 26%;
     margin-bottom: 50px;
 }
 .button {
